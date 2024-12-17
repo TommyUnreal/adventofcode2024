@@ -1,7 +1,7 @@
 from pathlib import Path
 
 def current_folder(file) -> Path:
-    """Return
+    """Return the path to the parent folder.
 
     Args:
         file (str): The path to the running py file.
@@ -39,7 +39,7 @@ def input_parser(file_path: Path) -> list:
 
 def try_parse(value):
     """
-    Tries to parse a string value as an integer. Falls back to the original string if parsing fails.
+    Try to parse a string value as an integer. Fall back to the string type if parsing fail.
 
     Args:
         value (str): The value to parse.
