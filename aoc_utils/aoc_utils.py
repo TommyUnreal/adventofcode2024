@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 
 def current_folder(file) -> Path:
     """Return the path to the parent folder.
@@ -51,3 +52,8 @@ def try_parse(value):
         return int(value)
     except ValueError:
         return str(value)
+
+
+def extract_ints(s: str) -> list:
+    """Extract  integers from a string."""
+    return [int(match) for match in re.findall(r'\d+', s)]
